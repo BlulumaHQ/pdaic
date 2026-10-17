@@ -49,6 +49,7 @@ export function HeroSlider() {
               key={`content-${i}`}
               className={cn(
                 "container-site grid items-center gap-12 py-14 transition-opacity duration-700 lg:grid-cols-12 lg:py-24",
+                !active && "absolute inset-0 md:relative md:inset-auto",
                 hiddenClass,
               )}
               aria-hidden={!active}
@@ -82,7 +83,8 @@ export function HeroSlider() {
           <div
             key={slide.src}
             className={cn(
-              "absolute inset-0 transition-opacity duration-700",
+              "transition-opacity duration-700 md:absolute md:inset-0",
+              active ? "relative" : "absolute inset-0",
               active ? "opacity-100" : "pointer-events-none opacity-0",
             )}
             aria-hidden={!active}
@@ -90,7 +92,7 @@ export function HeroSlider() {
             <img
               src={slide.src}
               alt={active ? slide.alt : ""}
-              className="absolute inset-0 h-full w-full object-cover object-top"
+              className="block h-auto w-full object-cover object-top md:absolute md:inset-0 md:h-full"
               width={1600}
               height={slide.src.includes("portrait") ? 886 : 1066}
               loading={i === 0 ? "eager" : "lazy"}
