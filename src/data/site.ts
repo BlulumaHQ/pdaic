@@ -123,6 +123,13 @@ export const members: Member[] = [
       { heading: "現任", items: ["世華工商婦女企管協會名譽會長"] },
     ],
   },
+  {
+    slug: "ting", nameEn: "TING", roleZh: "市場行銷", roleEn: "Marketing",
+    image: "/images/team-ting.webp",
+    sections: [
+      { heading: "簡介", items: ["TBA"] },
+    ],
+  },
 ];
 
 export type EventItem = {
