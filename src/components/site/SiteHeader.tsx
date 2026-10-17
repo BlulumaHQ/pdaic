@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, HeartHandshake, Menu, X } from "lucide-react";
 import { btn } from "./primitives";
 import { org } from "@/data/site";
 
@@ -15,7 +15,6 @@ const charity = [
   { to: "/協會給pafn的承諾", label: "協會給 PAFN 的承諾" },
 ] as const;
 const tail = [
-  { to: "/成為會員", label: "成為會員" },
   { to: "/聯絡我們-1", label: "聯絡我們" },
 ] as const;
 
@@ -27,11 +26,17 @@ export function SiteHeader() {
   const close = () => setOpen(false);
   return (
     <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur">
-      <div className="container-site flex h-20 items-center justify-between gap-6">
-        <Link to="/" className="flex items-center gap-3" onClick={close} aria-label={`${org.nameZh} 首頁`}>
-          <img src="/images/pdaic-logo-symbol.webp" alt="" width={44} height={44} className="h-11 w-11 rounded-md" />
+      <div className="container-site flex h-10 items-center justify-end gap-3 border-b bg-surface/60">
+        <Link to="/協會給pafn的承諾" hash="support" className="inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary">
+          <HeartHandshake className="h-4 w-4 text-primary" /> 捐款支持
+        </Link>
+        <Link to="/成為會員" className={btn({ size: "sm" })}>加入會員</Link>
+      </div>
+      <div className="container-site flex h-24 items-center justify-between gap-6">
+        <Link to="/" className="flex items-center gap-4" onClick={close} aria-label={`${org.nameZh} 首頁`}>
+          <img src="/images/pdaic-logo-symbol.webp" alt="" width={64} height={64} className="h-16 w-16 rounded-md" />
           <span className="leading-tight">
-            <span className="block text-[15px] font-bold text-primary">{org.nameZh}</span>
+            <span className="block text-xl font-bold text-primary">{org.nameZh}</span>
             <span className="hidden 2xl:block text-[10px] font-semibold tracking-[0.14em] text-muted-foreground uppercase">{org.nameEn}</span>
           </span>
         </Link>
@@ -56,11 +61,6 @@ export function SiteHeader() {
             <Link key={n.to} to={n.to} className={linkCls} activeProps={activeProps}>{n.label}</Link>
           ))}
         </nav>
-
-        <div className="hidden items-center gap-3 xl:flex">
-          <Link to="/協會給pafn的承諾" hash="support" className={btn({ variant: "outline", size: "sm" })}>捐款支持</Link>
-          <Link to="/成為會員" className={btn({ size: "sm" })}>加入會員</Link>
-        </div>
 
         <button className="xl:hidden rounded-md p-2 text-primary" onClick={() => setOpen(!open)} aria-expanded={open} aria-label={open ? "關閉選單" : "開啟選單"}>
           {open ? <X /> : <Menu />}
