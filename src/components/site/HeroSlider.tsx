@@ -11,7 +11,7 @@ type Slide =
 
 // Slide order: 團隊合影 → 原始首頁內容 → 楓紅團體照
 const slides: Slide[] = [
-  { kind: "photo", src: "/images/home-hero-team-portrait.webp", alt: "加拿大華人職能發展協會理監事團隊合影" },
+  { kind: "photo", src: "/images/home-hero-team-portrait-hero.webp", alt: "加拿大華人職能發展協會理監事團隊合影" },
   { kind: "content" },
   { kind: "photo", src: "/images/home-hero-team-walk.webp", alt: "協會成員在楓紅季節一同走在社區街道上" },
 ];
@@ -41,7 +41,7 @@ export function HeroSlider() {
     >
       {slides.map((slide, i) => {
         const active = index === i;
-        const hiddenClass = active ? "" : "pointer-events-none absolute inset-0 opacity-0";
+        const hiddenClass = active ? "opacity-100" : "pointer-events-none opacity-0";
 
         if (slide.kind === "content") {
           return (
@@ -52,6 +52,7 @@ export function HeroSlider() {
                 hiddenClass,
               )}
               aria-hidden={!active}
+              inert={!active}
             >
               <div className="fade-up lg:col-span-6">
                 <p className="eyebrow mb-6 text-secondary">{org.nameEn}</p>
@@ -81,10 +82,8 @@ export function HeroSlider() {
           <div
             key={slide.src}
             className={cn(
-              "transition-opacity duration-700",
-              active
-                ? "relative aspect-[3/2] opacity-100 lg:aspect-[2/1]"
-                : "pointer-events-none absolute inset-0 opacity-0",
+              "absolute inset-0 transition-opacity duration-700",
+              active ? "opacity-100" : "pointer-events-none opacity-0",
             )}
             aria-hidden={!active}
           >
@@ -93,7 +92,7 @@ export function HeroSlider() {
               alt={active ? slide.alt : ""}
               className="absolute inset-0 h-full w-full object-cover object-top"
               width={1600}
-              height={1066}
+              height={slide.src.includes("portrait") ? 886 : 1066}
               loading={i === 0 ? "eager" : "lazy"}
             />
           </div>
