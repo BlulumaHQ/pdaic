@@ -20,7 +20,7 @@ function Team() {
           {members.map((m) => (
             <button key={m.slug} onClick={() => setSel(m)} className="group text-left">
               <div className="overflow-hidden rounded-lg bg-surface">
-                <img src={m.image} alt={`${m.nameZh ?? ""} ${m.nameEn} 肖像`} loading="lazy" className="aspect-[4/5] w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+                <img src={m.image} alt={`${m.nameZh ?? ""} ${m.nameEn} 肖像`} loading="lazy" className={`aspect-[4/5] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] ${m.imgPos ?? "object-top"}`} />
               </div>
               <p className="mt-5 text-xs font-semibold tracking-widest text-secondary uppercase">{m.roleEn}</p>
               <h2 className="mt-1 text-xl font-bold">{m.nameZh} {m.nameEn}</h2>
@@ -35,7 +35,7 @@ function Team() {
         <DialogContent className="max-h-[90vh] max-w-2xl overflow-y-auto">
           {sel && (
             <div className="grid gap-6 sm:grid-cols-[180px_1fr]">
-              <img src={sel.image} alt={`${sel.nameEn} 肖像`} className="aspect-[4/5] w-full rounded-md object-cover object-top" />
+              <img src={sel.image} alt={`${sel.nameEn} 肖像`} className={`aspect-[4/5] w-full rounded-md object-cover ${sel.imgPos ?? "object-top"}`} />
               <div>
                 <DialogTitle className="text-2xl font-bold">{sel.nameZh} {sel.nameEn}</DialogTitle>
                 <DialogDescription className="text-primary">{sel.roleZh}{sel.roleEn ? ` · ${sel.roleEn}` : ""}</DialogDescription>
