@@ -90,7 +90,7 @@ export function HeroSlider() {
             <img
               src={slide.src}
               alt={active ? slide.alt : ""}
-              className="absolute inset-0 h-full w-full object-contain object-top lg:object-cover"
+              className="absolute inset-0 h-full w-full object-cover object-top"
               width={1600}
               height={slide.src.includes("portrait") ? 886 : 1066}
               loading={i === 0 ? "eager" : "lazy"}

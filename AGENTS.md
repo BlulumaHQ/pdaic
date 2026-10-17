@@ -15,4 +15,4 @@
 - Legacy Chinese URL slugs (e.g. /關於協會, /events-1/$slug) are preserved as route files so old links keep working.
 - Forms have no backend: they validate, then open the visitor's email app; never show a fake "sent/subscribed" success.
 - Upcoming vs past events is computed from the event date at render time.
-- The introductory text slide remains in normal flow to define a stable carousel height; photo slides fill that frame, with head-safe local crops and full-width group visibility on narrow screens.
+- The introductory text slide remains in normal flow to define a stable carousel height; photo slides fill that frame using object-cover and top alignment with head-safe local crops, so narrow screens crop the sides instead of adding empty space.
