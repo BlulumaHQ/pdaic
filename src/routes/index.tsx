@@ -124,7 +124,7 @@ function Home() {
           <div className="mt-12 grid grid-cols-2 gap-6 md:grid-cols-4">
             {members.slice(0, 4).map((m) => (
               <figure key={m.slug}>
-                <img src={m.image} alt={`${m.nameZh ?? ""} ${m.nameEn} ${m.roleZh}`} className="aspect-[4/5] w-full rounded-lg object-cover object-top" loading="lazy" />
+                <img src={m.image} alt={`${m.nameZh ?? ""} ${m.nameEn} ${m.roleZh}`} className="aspect-[4/5] w-full rounded-lg object-cover object-center" loading="lazy" />
                 <figcaption className="mt-4">
                   <p className="font-bold">{m.nameZh} {m.nameEn}</p>
                   <p className="text-sm text-secondary">{m.roleZh}</p>

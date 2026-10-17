@@ -46,7 +46,6 @@ export const members: Member[] = [
   {
     slug: "josephine-wu", nameZh: "吳秀美", nameEn: "Josephine Wu", roleZh: "會長", roleEn: "President",
     image: "/images/team-josephine-wu.webp",
-    imgPos: "object-[50%_50%]",
     sections: [
       { heading: "經歷", items: ["Global Digital Cross Industry of Taiwan Overseas Council (GITOC) 創會長及第一第二屆會長", "世華第十屆理事、第十一第二副會長", "加拿大中文電台新聞主播", "多家電視台記者／主播"] },
       { heading: "現任", items: ["悠活生活網 執行總監", "悠活母嬰孕產創辦人", "悠傳媒 執行總監"] },
