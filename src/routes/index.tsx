@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { btn, SectionHeading, Eyebrow } from "@/components/site/primitives";
 import { EventCard } from "@/components/site/EventCard";
+import { HeroSlider } from "@/components/site/HeroSlider";
 import { NewsletterForm } from "@/components/site/Forms";
 import { events, isUpcoming, members, org, purposes } from "@/data/site";
 import { seo } from "@/lib/seo";
@@ -20,31 +21,9 @@ function Home() {
   const recent = events.filter((e) => !isUpcoming(e)).slice(0, 3);
   return (
     <>
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-background">
-        <div className="container-site grid items-center gap-12 py-14 lg:grid-cols-12 lg:py-24">
-          <div className="fade-up lg:col-span-6">
-            <p className="eyebrow mb-6 text-secondary">{org.nameEn}</p>
-            <h1 className="text-[2.6rem] font-extrabold leading-[1.15] text-primary md:text-6xl lg:text-[4rem]">
-              連結專業・<br />啟發成長・<br />共創未來
-            </h1>
-            <p className="editorial-rule mt-8 max-w-lg text-lg text-muted-foreground">
-              致力於推動專業職能發展、商務交流與終身學習，連結人才、產業及社區，攜手創造更美好的未來。
-            </p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link to="/關於協會" className={btn()}>認識協會</Link>
-              <Link to="/成為會員" className={btn({ variant: "outline" })}>加入會員</Link>
-            </div>
-          </div>
-          <div className="lg:col-span-6">
-            <figure className="relative">
-              <div className="absolute -left-4 -top-4 hidden h-full w-full rounded-lg border border-lavender lg:block" aria-hidden />
-              <img src="/images/home-josephine-wu-speech.webp" alt="協會會長吳秀美於慈善晚宴宣傳影片中致詞" className="relative aspect-[3/2] w-full rounded-lg object-cover" width={960} height={540} />
-              <figcaption className="mt-3 text-xs text-muted-foreground">會長 吳秀美 Josephine Wu 為慈善晚宴致詞</figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
+      {/* Hero slider */}
+      <HeroSlider />
+
 
       {/* About */}
       <section className="section-y bg-surface">
