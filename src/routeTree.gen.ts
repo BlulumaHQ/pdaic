@@ -10,33 +10,148 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as Char21332Char26371Char25104Char21729RouteImport } from './routes/協會成員'
+import { Route as Char21332Char26371Char32102pafnChar30340Char25215Char35582RouteImport } from './routes/協會給pafn的承諾'
+import { Route as Char24904Char21892Char26202Char23476RouteImport } from './routes/慈善晚宴'
+import { Route as Char25104Char28858Char26371Char21729RouteImport } from './routes/成為會員'
+import { Route as Char32879Char32097Char25105Char204971RouteImport } from './routes/聯絡我們-1'
+import { Route as Char35506Char31243Char27963Char21205RouteImport } from './routes/課程活動'
+import { Route as Char38364Char26044Char21332Char26371RouteImport } from './routes/關於協會'
+import { Route as Events1SlugRouteImport } from './routes/events-1.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Char21332Char26371Char25104Char21729Route =
+  Char21332Char26371Char25104Char21729RouteImport.update({
+    id: '/協會成員',
+    path: '/協會成員',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char21332Char26371Char32102pafnChar30340Char25215Char35582Route =
+  Char21332Char26371Char32102pafnChar30340Char25215Char35582RouteImport.update({
+    id: '/協會給pafn的承諾',
+    path: '/協會給pafn的承諾',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char24904Char21892Char26202Char23476Route =
+  Char24904Char21892Char26202Char23476RouteImport.update({
+    id: '/慈善晚宴',
+    path: '/慈善晚宴',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char25104Char28858Char26371Char21729Route =
+  Char25104Char28858Char26371Char21729RouteImport.update({
+    id: '/成為會員',
+    path: '/成為會員',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char32879Char32097Char25105Char204971Route =
+  Char32879Char32097Char25105Char204971RouteImport.update({
+    id: '/聯絡我們-1',
+    path: '/聯絡我們-1',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char35506Char31243Char27963Char21205Route =
+  Char35506Char31243Char27963Char21205RouteImport.update({
+    id: '/課程活動',
+    path: '/課程活動',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Char38364Char26044Char21332Char26371Route =
+  Char38364Char26044Char21332Char26371RouteImport.update({
+    id: '/關於協會',
+    path: '/關於協會',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const Events1SlugRoute = Events1SlugRouteImport.update({
+  id: '/events-1/$slug',
+  path: '/events-1/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/協會成員': typeof Char21332Char26371Char25104Char21729Route
+  '/協會給pafn的承諾': typeof Char21332Char26371Char32102pafnChar30340Char25215Char35582Route
+  '/慈善晚宴': typeof Char24904Char21892Char26202Char23476Route
+  '/成為會員': typeof Char25104Char28858Char26371Char21729Route
+  '/聯絡我們-1': typeof Char32879Char32097Char25105Char204971Route
+  '/課程活動': typeof Char35506Char31243Char27963Char21205Route
+  '/關於協會': typeof Char38364Char26044Char21332Char26371Route
+  '/events-1/$slug': typeof Events1SlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/協會成員': typeof Char21332Char26371Char25104Char21729Route
+  '/協會給pafn的承諾': typeof Char21332Char26371Char32102pafnChar30340Char25215Char35582Route
+  '/慈善晚宴': typeof Char24904Char21892Char26202Char23476Route
+  '/成為會員': typeof Char25104Char28858Char26371Char21729Route
+  '/聯絡我們-1': typeof Char32879Char32097Char25105Char204971Route
+  '/課程活動': typeof Char35506Char31243Char27963Char21205Route
+  '/關於協會': typeof Char38364Char26044Char21332Char26371Route
+  '/events-1/$slug': typeof Events1SlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/協會成員': typeof Char21332Char26371Char25104Char21729Route
+  '/協會給pafn的承諾': typeof Char21332Char26371Char32102pafnChar30340Char25215Char35582Route
+  '/慈善晚宴': typeof Char24904Char21892Char26202Char23476Route
+  '/成為會員': typeof Char25104Char28858Char26371Char21729Route
+  '/聯絡我們-1': typeof Char32879Char32097Char25105Char204971Route
+  '/課程活動': typeof Char35506Char31243Char27963Char21205Route
+  '/關於協會': typeof Char38364Char26044Char21332Char26371Route
+  '/events-1/$slug': typeof Events1SlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/協會成員'
+    | '/協會給pafn的承諾'
+    | '/慈善晚宴'
+    | '/成為會員'
+    | '/聯絡我們-1'
+    | '/課程活動'
+    | '/關於協會'
+    | '/events-1/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/協會成員'
+    | '/協會給pafn的承諾'
+    | '/慈善晚宴'
+    | '/成為會員'
+    | '/聯絡我們-1'
+    | '/課程活動'
+    | '/關於協會'
+    | '/events-1/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/協會成員'
+    | '/協會給pafn的承諾'
+    | '/慈善晚宴'
+    | '/成為會員'
+    | '/聯絡我們-1'
+    | '/課程活動'
+    | '/關於協會'
+    | '/events-1/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  Char21332Char26371Char25104Char21729Route: typeof Char21332Char26371Char25104Char21729Route
+  Char21332Char26371Char32102pafnChar30340Char25215Char35582Route: typeof Char21332Char26371Char32102pafnChar30340Char25215Char35582Route
+  Char24904Char21892Char26202Char23476Route: typeof Char24904Char21892Char26202Char23476Route
+  Char25104Char28858Char26371Char21729Route: typeof Char25104Char28858Char26371Char21729Route
+  Char32879Char32097Char25105Char204971Route: typeof Char32879Char32097Char25105Char204971Route
+  Char35506Char31243Char27963Char21205Route: typeof Char35506Char31243Char27963Char21205Route
+  Char38364Char26044Char21332Char26371Route: typeof Char38364Char26044Char21332Char26371Route
+  Events1SlugRoute: typeof Events1SlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +163,82 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/協會成員': {
+      id: '/協會成員'
+      path: '/協會成員'
+      fullPath: '/協會成員'
+      preLoaderRoute: typeof Char21332Char26371Char25104Char21729RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/協會給pafn的承諾': {
+      id: '/協會給pafn的承諾'
+      path: '/協會給pafn的承諾'
+      fullPath: '/協會給pafn的承諾'
+      preLoaderRoute: typeof Char21332Char26371Char32102pafnChar30340Char25215Char35582RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/慈善晚宴': {
+      id: '/慈善晚宴'
+      path: '/慈善晚宴'
+      fullPath: '/慈善晚宴'
+      preLoaderRoute: typeof Char24904Char21892Char26202Char23476RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/成為會員': {
+      id: '/成為會員'
+      path: '/成為會員'
+      fullPath: '/成為會員'
+      preLoaderRoute: typeof Char25104Char28858Char26371Char21729RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/聯絡我們-1': {
+      id: '/聯絡我們-1'
+      path: '/聯絡我們-1'
+      fullPath: '/聯絡我們-1'
+      preLoaderRoute: typeof Char32879Char32097Char25105Char204971RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/課程活動': {
+      id: '/課程活動'
+      path: '/課程活動'
+      fullPath: '/課程活動'
+      preLoaderRoute: typeof Char35506Char31243Char27963Char21205RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/關於協會': {
+      id: '/關於協會'
+      path: '/關於協會'
+      fullPath: '/關於協會'
+      preLoaderRoute: typeof Char38364Char26044Char21332Char26371RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events-1/$slug': {
+      id: '/events-1/$slug'
+      path: '/events-1/$slug'
+      fullPath: '/events-1/$slug'
+      preLoaderRoute: typeof Events1SlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  Char21332Char26371Char25104Char21729Route:
+    Char21332Char26371Char25104Char21729Route,
+  Char21332Char26371Char32102pafnChar30340Char25215Char35582Route:
+    Char21332Char26371Char32102pafnChar30340Char25215Char35582Route,
+  Char24904Char21892Char26202Char23476Route:
+    Char24904Char21892Char26202Char23476Route,
+  Char25104Char28858Char26371Char21729Route:
+    Char25104Char28858Char26371Char21729Route,
+  Char32879Char32097Char25105Char204971Route:
+    Char32879Char32097Char25105Char204971Route,
+  Char35506Char31243Char27963Char21205Route:
+    Char35506Char31243Char27963Char21205Route,
+  Char38364Char26044Char21332Char26371Route:
+    Char38364Char26044Char21332Char26371Route,
+  Events1SlugRoute: Events1SlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
