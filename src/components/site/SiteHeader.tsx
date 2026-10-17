@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, HeartHandshake, Menu, X } from "lucide-react";
 import { btn } from "./primitives";
 import { org } from "@/data/site";
 
