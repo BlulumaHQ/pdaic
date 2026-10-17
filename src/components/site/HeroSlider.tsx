@@ -36,7 +36,7 @@ export function HeroSlider() {
       <div
         className={cn(
           "container-site grid items-center gap-12 py-14 transition-opacity duration-700 lg:grid-cols-12 lg:py-24",
-          index !== 0 && "pointer-events-none opacity-0",
+          index !== 0 && "pointer-events-none absolute inset-0 opacity-0",
         )}
       >
         <div className="fade-up lg:col-span-6">
@@ -66,12 +66,14 @@ export function HeroSlider() {
         <div
           key={s.src}
           className={cn(
-            "absolute inset-0 transition-opacity duration-700",
-            index === i + 1 ? "opacity-100" : "pointer-events-none opacity-0",
+            "transition-opacity duration-700",
+            index === i + 1
+              ? "relative aspect-[3/2] opacity-100 lg:aspect-[2/1]"
+              : "pointer-events-none absolute inset-0 opacity-0",
           )}
           aria-hidden={index !== i + 1}
         >
-          <img src={s.src} alt={index === i + 1 ? s.alt : ""} className="h-full w-full object-cover" loading={i === 0 ? "eager" : "lazy"} />
+          <img src={s.src} alt={index === i + 1 ? s.alt : ""} className="absolute inset-0 h-full w-full object-cover object-top" width={1600} height={1066} loading={i === 0 ? "eager" : "lazy"} />
         </div>
       ))}
 
