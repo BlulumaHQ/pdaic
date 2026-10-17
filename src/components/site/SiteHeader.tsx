@@ -19,7 +19,7 @@ const tail = [
   { to: "/聯絡我們-1", label: "聯絡我們" },
 ] as const;
 
-const linkCls = "text-sm font-medium text-foreground transition-colors hover:text-primary";
+const linkCls = "whitespace-nowrap text-sm font-medium text-foreground transition-colors hover:text-primary";
 const activeProps = { className: "text-primary font-semibold" };
 
 export function SiteHeader() {
@@ -32,11 +32,11 @@ export function SiteHeader() {
           <img src="/images/pdaic-logo-symbol.webp" alt="" width={44} height={44} className="h-11 w-11 rounded-md" />
           <span className="leading-tight">
             <span className="block text-[15px] font-bold text-primary">{org.nameZh}</span>
-            <span className="block text-[10px] font-semibold tracking-[0.14em] text-muted-foreground uppercase">{org.nameEn}</span>
+            <span className="hidden 2xl:block text-[10px] font-semibold tracking-[0.14em] text-muted-foreground uppercase">{org.nameEn}</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 xl:flex" aria-label="主選單">
+        <nav className="hidden items-center gap-5 xl:flex" aria-label="主選單">
           {nav.map((n) => (
             <Link key={n.to} to={n.to} className={linkCls} activeProps={activeProps} activeOptions={{ exact: n.to === "/" }}>{n.label}</Link>
           ))}

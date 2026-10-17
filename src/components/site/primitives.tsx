@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 export const btn = cva(
-  "inline-flex items-center justify-center gap-2 rounded-md px-6 py-3 text-sm font-semibold tracking-wide transition-colors duration-200 disabled:opacity-60",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-6 py-3 text-sm font-semibold tracking-wide transition-colors duration-200 disabled:opacity-60",
   {
     variants: {
       variant: {
