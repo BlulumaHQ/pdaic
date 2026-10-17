@@ -20,7 +20,7 @@ export const btn = cva(
 );
 export type BtnProps = VariantProps<typeof btn>;
 
-export function Eyebrow({ children, light }: { children: ReactNode; light?: boolean }) {
+export function Eyebrow({ children, light }: { children: ReactNode; light?: boolean | undefined }) {
   return <p className={cn("eyebrow mb-4", light ? "text-gold" : "text-secondary")}>{children}</p>;
 }
 
