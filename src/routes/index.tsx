@@ -55,7 +55,7 @@ function Home() {
             </SectionHeading>
             <Link to="/關於協會" className={`${btn({ variant: "link" })} mt-8 ml-6`}>了解更多 →</Link>
           </div>
-          <img src="/images/pdaic-commitment-cover.webp" onError={(e) => ((e.currentTarget.src = "/images/charity-gala-2026-poster-tc.webp"))} alt="2026 溫馨音樂會慈善晚宴主視覺" className="mx-auto aspect-[4/5] w-full max-w-md rounded-lg object-cover object-top shadow-xl" loading="lazy" />
+          <img src="/images/charity-gala-2026-poster-tc.webp" alt="2026 溫馨音樂會慈善晚宴主視覺" className="mx-auto aspect-[4/5] w-full max-w-md rounded-lg object-cover object-top shadow-xl" loading="lazy" />
         </div>
       </section>
 
